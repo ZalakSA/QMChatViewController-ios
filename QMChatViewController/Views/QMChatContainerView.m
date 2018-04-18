@@ -117,8 +117,6 @@ static NSMutableDictionary *_imaages = nil;
     _preview.userInteractionEnabled = YES;
     _preview.autoresizingMask =
     UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    self.arrowSize = CGSizeZero;
-    self.leftArrow = false;
     UIImage *bubleImg =
     [QMChatContainerView bubleImageWithArrowSize:self.arrowSize
                                        fillColor:self.bgColor

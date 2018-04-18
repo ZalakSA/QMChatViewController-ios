@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,7 +37,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X4d-J3-f3R" userLabel="ContainerView" customClass="QMChatContainerView">
-                        <rect key="frame" x="46" y="0.0" width="163" height="60"/>
+                        <rect key="frame" x="49" y="0.0" width="163" height="60"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0t-IR-BXe" customClass="QMProgressView">
                                 <rect key="frame" x="0.0" y="0.0" width="163" height="60"/>
@@ -91,10 +91,10 @@
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
-                                <color key="value" red="0.74387138850000001" green="0.53844690569999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="highlightColor">
-                                <color key="value" red="0.5758987968" green="0.63260070530000001" blue="0.69994870580000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="4"/>
@@ -112,7 +112,7 @@
                 <constraint firstAttribute="bottom" secondItem="9rP-wb-z5V" secondAttribute="bottom" id="09m-uA-oeV"/>
                 <constraint firstAttribute="bottom" secondItem="X4d-J3-f3R" secondAttribute="bottom" id="30n-9f-7ba"/>
                 <constraint firstItem="X4d-J3-f3R" firstAttribute="top" secondItem="gZD-h7-m4h" secondAttribute="top" id="AdK-Ye-Mly"/>
-                <constraint firstItem="X4d-J3-f3R" firstAttribute="leading" secondItem="9rP-wb-z5V" secondAttribute="trailing" constant="2" id="c5d-pF-MsH"/>
+                <constraint firstItem="X4d-J3-f3R" firstAttribute="leading" secondItem="9rP-wb-z5V" secondAttribute="trailing" constant="5" id="c5d-pF-MsH"/>
                 <constraint firstItem="9rP-wb-z5V" firstAttribute="leading" secondItem="gZD-h7-m4h" secondAttribute="leading" id="fXZ-iN-Bju"/>
             </constraints>
             <size key="customSize" width="252" height="200"/>

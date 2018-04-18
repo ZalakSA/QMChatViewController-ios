@@ -148,6 +148,10 @@ UIAlertViewDelegate, QMChatDataSourceDelegate>
     
     self.chatDataSource = [[QMChatDataSource alloc] init];
     self.chatDataSource.delegate = self;
+    UITapGestureRecognizer* tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleCollectionTapRecognizer:)];
+    tapRecognizer.cancelsTouchesInView = NO;
+    tapRecognizer.delegate = self;
+    [self.collectionView addGestureRecognizer:tapRecognizer];
     
     self.inputToolbar.delegate = self;
     self.inputToolbar.contentView.textView.delegate = self;
@@ -265,9 +269,9 @@ UIAlertViewDelegate, QMChatDataSourceDelegate>
 
 - (NSUInteger)inputToolBarStartPos {
     
-    if (self.tabBarItem) {
-        return self.tabBarController.tabBar.frame.size.height;
-    }
+//    if (self.tabBarItem) {
+//        return self.tabBarController.tabBar.frame.size.height;
+//    }
     
     return 0;
 }
@@ -781,10 +785,10 @@ UIAlertViewDelegate, QMChatDataSourceDelegate>
     
     if (animated) {
         
-        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+//        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             
-            self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+//            self.navigationController.interactivePopGestureRecognizer.enabled = YES;
         });
         
         [self.view layoutIfNeeded];
@@ -1040,6 +1044,20 @@ UIAlertViewDelegate, QMChatDataSourceDelegate>
     else {
         hideKeyboardBlock();
     }
+}
+
+- (void) handleCollectionTapRecognizer:(UITapGestureRecognizer*)recognizer
+{
+    if(recognizer.state == UIGestureRecognizerStateEnded)
+    {
+        [self.view endEditing:YES];
+        if([self.inputToolbar.contentView.textView isFirstResponder])
+            [self.inputToolbar.contentView.textView resignFirstResponder];
+    }
+}
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    [self.view endEditing:YES];
+    return YES; // handle the touch
 }
 
 @end

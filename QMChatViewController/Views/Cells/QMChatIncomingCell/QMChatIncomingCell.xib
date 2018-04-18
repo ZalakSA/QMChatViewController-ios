@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment version="2048" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -36,7 +36,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lux-vg-6Z5" userLabel="ContainerView" customClass="QMChatContainerView">
-                        <rect key="frame" x="46" y="0.0" width="163" height="75"/>
+                        <rect key="frame" x="49" y="0.0" width="163" height="75"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBa-gJ-Bzq" userLabel="Message Container">
                                 <rect key="frame" x="11" y="3" width="149" height="71"/>
@@ -115,7 +115,7 @@
                 <constraint firstItem="lux-vg-6Z5" firstAttribute="top" secondItem="C3M-tc-m20" secondAttribute="top" identifier="incCellContainerTopToCellTop" id="2aL-wM-yzn"/>
                 <constraint firstItem="W0n-sL-BzS" firstAttribute="leading" secondItem="C3M-tc-m20" secondAttribute="leading" id="Cgk-xL-zfE"/>
                 <constraint firstItem="W0n-sL-BzS" firstAttribute="bottom" secondItem="lux-vg-6Z5" secondAttribute="bottom" identifier="incCellAvaContainerBottomToContainerBottom" id="Hq1-4R-ZL2"/>
-                <constraint firstItem="lux-vg-6Z5" firstAttribute="leading" secondItem="W0n-sL-BzS" secondAttribute="trailing" priority="750" constant="2" id="NeG-V3-bBd"/>
+                <constraint firstItem="lux-vg-6Z5" firstAttribute="leading" secondItem="W0n-sL-BzS" secondAttribute="trailing" priority="750" constant="5" id="NeG-V3-bBd"/>
                 <constraint firstAttribute="bottom" secondItem="lux-vg-6Z5" secondAttribute="bottom" identifier="incCellBottomToContainerBottom" id="m5g-Xl-Xx2"/>
             </constraints>
             <size key="customSize" width="252" height="75"/>

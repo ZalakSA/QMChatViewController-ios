@@ -79,7 +79,7 @@
     _recordDurationLabel.backgroundColor = self.backgroundColor;
     _recordDurationLabel.textColor = [UIColor blackColor];
     _recordDurationLabel.font = [UIFont systemFontOfSize:16.0];
-    _recordDurationLabel.text = @"0:00,00 ";
+    _recordDurationLabel.text = @"0:00:00 ";
     _recordDurationLabel.textAlignment = NSTextAlignmentLeft;
     
     UIImage *indicatorImage = circleImage(CGRectGetWidth(_recordIndicatorView.frame), [UIColor redColor]);
@@ -114,7 +114,7 @@
         
         _slideToCancelLabel.transform = CGAffineTransformMakeTranslation(avoidOffset, 0.0f);
         
-        _recordDurationLabel.text = @"0:00,00";
+        _recordDurationLabel.text = @"0:00:00";
         
         [_recordIndicatorView.layer removeAllAnimations];
         [_recordDurationLabel.layer removeAllAnimations];
@@ -257,7 +257,7 @@ UIImage *circleImage(CGFloat radius, UIColor *color) {
 
 - (void)startAudioRecordingTimer {
     
-    _recordDurationLabel.text = @"0:00,00";
+    _recordDurationLabel.text = @"0:00:00";
     _recordDurationLabel.textColor = [UIColor blackColor];
     
     _audioRecordingDurationSeconds = 0;
@@ -343,7 +343,7 @@ UIImage *circleImage(CGFloat radius, UIColor *color) {
                 
                 _audioRecordingDurationSeconds = currentAudioDurationSeconds;
                 _audioRecordingDurationMilliseconds = currentAudioDurationMilliseconds;
-                _recordDurationLabel.text = [[NSString alloc] initWithFormat:@"%d:%02d,%02d", (int)_audioRecordingDurationSeconds / 60, (int)_audioRecordingDurationSeconds % 60, (int)_audioRecordingDurationMilliseconds];
+                _recordDurationLabel.text = [[NSString alloc] initWithFormat:@"%02d:%02d,%02d", (int)_audioRecordingDurationSeconds / 60, (int)_audioRecordingDurationSeconds % 60, (int)_audioRecordingDurationMilliseconds];
                 
                 [self.delegate shouldStopRecordingByTimeOut];
                 [self removeDotAnimation];
@@ -355,7 +355,7 @@ UIImage *circleImage(CGFloat radius, UIColor *color) {
         
         _audioRecordingDurationSeconds = currentAudioDurationSeconds;
         _audioRecordingDurationMilliseconds = currentAudioDurationMilliseconds;
-        _recordDurationLabel.text = [[NSString alloc] initWithFormat:@"%d:%02d,%02d", (int)_audioRecordingDurationSeconds / 60, (int)_audioRecordingDurationSeconds % 60, (int)_audioRecordingDurationMilliseconds];
+        _recordDurationLabel.text = [[NSString alloc] initWithFormat:@"%d:%02d:%02d", (int)_audioRecordingDurationSeconds / 60, (int)_audioRecordingDurationSeconds % 60, (int)_audioRecordingDurationMilliseconds];
         
         
         NSTimeInterval interval = 2.0 / 60.0;

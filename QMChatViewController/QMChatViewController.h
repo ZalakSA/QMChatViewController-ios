@@ -198,6 +198,8 @@
                   senderId:(NSUInteger)senderId
          senderDisplayName:(NSString *)senderDisplayName
                       date:(NSDate *)date;
+
+- (void)didPressSendButton:(UIButton *)sender;
 /**
  *  This method is called when the user taps the accessory button on the `inputToolbar`.
  *
@@ -271,5 +273,5 @@
 
 - (void)viewDidLoad NS_REQUIRES_SUPER;
 - (void)viewWillAppear:(BOOL)animated NS_REQUIRES_SUPER;
-
+- (void)checkAuthorizationStatusWithCompletion:(void (^)(BOOL granted))completion;
 @end
